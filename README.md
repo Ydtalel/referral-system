@@ -36,17 +36,25 @@ source .venv/bin/activate  # Для Mac/Linux
 ```
 ### 3. Установка зависимостей
 `pip install -r requirements.txt`
-Создайте .env фаил в корне проекта со следующим содержимым:   
+
+Создайте .env фаил в корне проекта со следующим содержимым: 
+
 DB_NAME=<your_db_name>
+
 DB_USER=<your_db_user>
+
 DB_PASSWORD=<your_db_password>
+
 DB_HOST=<your_db_host>
+
 DB_PORT=<your_db_port>
 
 DEBUG=True
 
 HUNTER_API_KEY=<your_hunter.io_api_key>
 ### 4. Применение миграций
+`python manage.py makemigrations`
+
 `python manage.py migrate`
 ### 5. Запуск сервера
 `python manage.py runserver`
